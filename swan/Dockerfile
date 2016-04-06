@@ -24,4 +24,8 @@ RUN wget http://swanmodel.sourceforge.net/download/zip/refrac.tar.gz && \
 # test 
 WORKDIR /model/refrac
 RUN cp a11refr.swn INPUT
-RUN time mpirun -np 4 swan.exe
+RUN echo 'mpirun -np 4 swan.exe' > /model/run.sh
+# RUN time mpirun -np 4 swan.exe
+
+
+
